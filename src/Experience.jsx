@@ -1,12 +1,6 @@
 import { Text, Html, ContactShadows, Environment, Float, PresentationControls, useGLTF } from '@react-three/drei'
 
-
-function MacbookModel(props) {
-    const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf')
-    return <primitive object={scene} {...props} scale={[0.25,0.25,0.25]} />
-}
-
-export default function Experience() {
+const Scene = () => {
     const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf')
 
     return <>
@@ -26,3 +20,5 @@ export default function Experience() {
         <ContactShadows position-y={-1.4} opacity={0.4} scale={5} blur={2.4}/>
     </>
 }
+
+export default Scene
